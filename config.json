@@ -1,9 +1,9 @@
 {
     "functions": {
-        "128": "https://6qsumvm2xg.execute-api.us-west-1.amazonaws.com/prod/bilal_128",
-        "256": "https://6qsumvm2xg.execute-api.us-west-1.amazonaws.com/prod/bilal_256",
-        "512": "https://6qsumvm2xg.execute-api.us-west-1.amazonaws.com/prod/bilal_512",
-        "1024": "https://6qsumvm2xg.execute-api.us-west-1.amazonaws.com/prod/bilal_1024"
+        "128": "https://trxe4leo0g.execute-api.us-west-1.amazonaws.com/prod/api128",
+        "256": "https://trxe4leo0g.execute-api.us-west-1.amazonaws.com/prod/api256",
+        "512": "https://trxe4leo0g.execute-api.us-west-1.amazonaws.com/prod/api512",
+        "1024": "https://trxe4leo0g.execute-api.us-west-1.amazonaws.com/prod/api1024"
     }
 }
 

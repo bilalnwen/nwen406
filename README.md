@@ -7,3 +7,5 @@
 # sudo pip install requests-futures
 # go get -u github.com/gorilla/mux
 #  sudo yum install golang sudo yum install git 
+#  sudo yum install git 
+#  git clone https://github.com/bilalnwen/nwen406.git

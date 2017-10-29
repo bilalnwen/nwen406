@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The XMLHttpRequest Object</h1>
+
+<button type="button" onclick="loadDoc()">Request data</button>
+
+<p id="demo"></p>
+ <script src="/echarts.min.js"></script> 
+  <div id="main" style="width: 600px;height:400px;"></div>
+   
+<script>
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML = this.responseText;
+   var   dd   = JSON.parse(this.responseText) ; 
+var  cost = [] 
+for (var i= 0 ; i < dd.length ; i++) {
+          cost.push ( parseFloat(dd[i].cost)  )
+
+}
+ var myChart = echarts.init(document.getElementById('main'));
+
+        // specify chart configuration item and data
+        var option = {
+            title: {
+                text: 'ECharts entry example'
+            },
+            tooltip: {},
+            legend: {
+                data:['Sales']
+            },
+            xAxis: {
+                data: ["128mb","256mb","512mb","1024mb"]
+            },
+            yAxis: {},
+            series: [{
+                name: 'Sales',
+                type:     'bar' , // 'bar'  'pie' , 
+                data:[   {value:cost[0], name:'128mb'},
+                {value:cost[1], name:'256mb'},
+                {value:cost[2], name:'512mb'},
+                {value:cost[3], name:'1024mb'}] // cost//[5, 20, 36, 10, 10, 20]
+            }]
+        };
+
+        // use configuration item and data specified to show chart
+        myChart.setOption(option);
+
+
+ }
+  };
+  xhttp.open("GET", "/people", true);
+  xhttp.send();
+}
+</script>
+
+</body>
+</html>

@@ -14,18 +14,26 @@ uturesSession = FuturesSession(max_workers=100)
 fs = []
 for i in range (100) :
     fs.append(uturesSession.get("https://trxe4leo0g.execute-api.us-west-1.amazonaws.com/prod/api1024?max=100&loops=1",headers = apikeyhead))
-    #print () 
+
+    
+stcode =None     
 for  i  in range  (100 )  :
     re  = fs[i].result()
     if re.status_code != 200 :
         print ( re.status_code)
+        stcode = re.status_code
     else :
         rea.append (re.json())
 print (rea)
 
 
+if stcode == 200 :
+    print ("Challenge A is working and the API key is")
 
-
+    print (apikeyhead)
+else :
+    
+    print ("wrong API KEY")
 
 
 

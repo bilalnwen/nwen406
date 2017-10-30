@@ -19,8 +19,8 @@
 
 
 ## run A :
-## python go.py
+## python A.py
 
 
 ## run A+ :
-## python 406.py
+## go run Aplus.go

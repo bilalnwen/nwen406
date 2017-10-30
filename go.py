@@ -8,16 +8,17 @@ from requests_futures.sessions import FuturesSession
 
 #apikeyhead = { 'x-api-key': "wrongapikey"}
 apikeyhead = { 'x-api-key': "rZK9Xecrrl5iu7at8wmhB2krq8xyxhvM7rzOLb4i"}   #  right 
-
+times = 10 
 rea = []
 uturesSession = FuturesSession(max_workers=100)
 fs = []
-for i in range (100) :
+stcode =None  
+for i in range (times) :
     fs.append(uturesSession.get("https://trxe4leo0g.execute-api.us-west-1.amazonaws.com/prod/api1024?max=100&loops=1",headers = apikeyhead))
 
     
-stcode =None     
-for  i  in range  (100 )  :
+   
+for  i  in range  (times )  :
     re  = fs[i].result()
     if re.status_code != 200 :
         #print ( re.status_code)
@@ -26,7 +27,7 @@ for  i  in range  (100 )  :
         rea.append (re.json())
         stcode = re.status_code
         
-print ("Concurrent 100 times ")        
+print ("Concurrent 100 times :")        
 print (rea)
 
 
@@ -40,12 +41,12 @@ import requests
 
 
 nonConArray = [] 
-for i in range (100) :
+for i in range (times) :
     r = requests.get('https://trxe4leo0g.execute-api.us-west-1.amazonaws.com/prod/api1024'+'?max='+str(1000000)+'&loops='+ str(1),headers = apikeyhead)
     nonConArray.append (r.json())
-    print (r.json())
+    #print (r.json())
     
-print (" non Concurrent 100 times ")         
+print (" non Concurrent 100 times: ")         
 print (nonConArray)
 
 

@@ -28,6 +28,8 @@ for  i  in range  (100 )  :
 print (rea)
 
 
+print ("stcode")
+print (stcode)
 if stcode == 200 :
     print ("Challenge A is working and the API key is")
 

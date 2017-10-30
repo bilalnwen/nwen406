@@ -16,3 +16,11 @@
 
 
 #### { "queryStringParameters": { "max": 1000000, "loops": 1 } }
+
+
+## run A :
+## python go.py
+
+
+## run A+ :
+## python 406.py

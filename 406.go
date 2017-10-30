@@ -171,7 +171,7 @@ func triggerLambda(url string, mem int, max int, loops int) (execution, error) {
 	req, err := http.NewRequest("GET", fmt.Sprintf("%s?max=%d&loops=%d", url, max, loops), nil)
 	//	fmt.Printf(fmt.Sprintf("%s?max=%d&loops=%d", url, max, loops))
 	// ...
-	req.Header.Add("x-api-key", "rDGgZtlFRY7CaGQy7Qvb21R0VxICImme5FiJVvuc") // 'x-api-key': "rDGgZtlFRY7CaGQy7Qvb21R0VxICImme5FiJ"+last4,   #Vvuc
+	req.Header.Add("x-api-key", "rZK9Xecrrl5iu7at8wmhB2krq8xyxhvM7rzOLb4i") // 'x-api-key': "rDGgZtlFRY7CaGQy7Qvb21R0VxICImme5FiJ"+last4,   #Vvuc
 	resp, err := client.Do(req)
 	// ...
 

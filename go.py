@@ -6,8 +6,8 @@ import requests
 
 from requests_futures.sessions import FuturesSession
 
-
-apikeyhead = { 'x-api-key': "wrong"}
+#apikeyhead = { 'x-api-key': "wrongapikey"}
+apikeyhead = { 'x-api-key': "rZK9Xecrrl5iu7at8wmhB2krq8xyxhvM7rzOLb4i"}   #  right 
 
 rea = []
 uturesSession = FuturesSession(max_workers=100)
@@ -25,18 +25,12 @@ for  i  in range  (100 )  :
     else :
         rea.append (re.json())
         stcode = re.status_code
+        
+print ("Concurrent 100 times ")        
 print (rea)
 
 
-print ("stcode")
-print (stcode)
-if stcode == 200 :
-    print ("Challenge A is working and the API key is")
 
-    print (apikeyhead)
-else :
-    
-    print ("wrong API KEY")
 
 
 
@@ -49,10 +43,20 @@ nonConArray = []
 for i in range (100) :
     r = requests.get('https://trxe4leo0g.execute-api.us-west-1.amazonaws.com/prod/api1024'+'?max='+str(1000000)+'&loops='+ str(1),headers = apikeyhead)
     nonConArray.append (r.json())
+
     
+print (" non Concurrent 100 times ")         
 print (nonConArray)
 
 
+
+if stcode == 200 :
+    print ("Challenge A is working and the API key is")
+
+    print (apikeyhead)
+else :
+    
+    print ("wrong API KEY")
 
 
 

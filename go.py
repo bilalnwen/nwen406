@@ -36,7 +36,7 @@ import requests
 
 
 for i in range (100) :
-    r = requests.get('https://trxe4leo0g.execute-api.us-west-1.amazonaws.com/prod/api1024'+'?max='+str(1000000)+'&loops='+ str(1))
+    r = requests.get('https://trxe4leo0g.execute-api.us-west-1.amazonaws.com/prod/api1024'+'?max='+str(1000000)+'&loops='+ str(1),headers = apikeyhead)
     print (r.json())
 
 

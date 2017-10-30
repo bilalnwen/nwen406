@@ -54,7 +54,7 @@ func editHandler(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		p = &Page{Title: title}
 	}
-	fmt.Printf("go lang server running on port 8000")
+	fmt.Printf("go lang server running on http://13.56.198.143:8000/edit/")
 	renderTemplate(w, "edit", p)
 }
 

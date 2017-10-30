@@ -7,7 +7,7 @@ import requests
 from requests_futures.sessions import FuturesSession
 
 
-apikeyhead = { 'x-api-key': "rZK9Xecrrl5iu7at8wmhB2krq8xyxhvM7rzOLb4i"}
+apikeyhead = { 'x-api-key': "wrong"}
 
 rea = []
 uturesSession = FuturesSession(max_workers=100)

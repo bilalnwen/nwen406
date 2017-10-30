@@ -20,7 +20,7 @@ stcode =None
 for  i  in range  (100 )  :
     re  = fs[i].result()
     if re.status_code != 200 :
-        print ( re.status_code)
+        #print ( re.status_code)
         stcode = re.status_code
     else :
         rea.append (re.json())

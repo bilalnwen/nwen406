@@ -7,13 +7,13 @@ import requests
 from requests_futures.sessions import FuturesSession
 
 
-apikeyhead = { 'x-api-key': ""}
+apikeyhead = { 'x-api-key': "rZK9Xecrrl5iu7at8wmhB2krq8xyxhvM7rzOLb4i"}
 
 rea = []
 uturesSession = FuturesSession(max_workers=100)
 fs = []
 for i in range (100) :
-    fs.append(uturesSession.get("?max=100&loops=1",headers = apikeyhead))
+    fs.append(uturesSession.get("https://trxe4leo0g.execute-api.us-west-1.amazonaws.com/prod/api1024?max=100&loops=1",headers = apikeyhead))
     #print () 
 for  i  in range  (100 )  :
     re  = fs[i].result()
@@ -36,7 +36,7 @@ import requests
 
 
 for i in range (100) :
-    r = requests.get('?max='+str(1000000)+'&loops='+ str(1))
+    r = requests.get('https://trxe4leo0g.execute-api.us-west-1.amazonaws.com/prod/api1024'+'?max='+str(1000000)+'&loops='+ str(1))
     print (r.json())
 
 

@@ -24,7 +24,7 @@ for  i  in range  (100 )  :
         stcode = re.status_code
     else :
         rea.append (re.json())
-        print ( re.status_code)
+        stcode = re.status_code
 print (rea)
 
 
